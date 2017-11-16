@@ -1,0 +1,77 @@
+   @import "./mixins.less";
+  .index_banner{
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &.server_banner{
+        .bg-image('../../static/images/17.jpg');
+    }
+    &.about_banner{
+        .bg-image('../../static/images/11.jpg');
+    }
+    &.case_banner{
+        .bg-image('../../static/images/9.jpg');
+    }
+    &.connect_banner{
+        .bg-image('../../static/images/22.jpg');
+    }
+    &.activity_banner{
+        .bg-image('../../static/images/31.jpg');
+    }
+  }
+  h2.title{
+    position: absolute;
+    font-size: 0.4rem;
+    color: #FFFFFF;
+    &.server_title{
+        left: 20%;
+        top: 50%;
+    }
+    &.about_title{
+        transform: translate(-50%,-20%);
+        left: 50%;
+        top: 40%;
+    }
+    &.case_title{
+        transform: translate(0,-40%);
+        left: 30%;
+        top: 40%;
+    }
+  }
+  p.sub_title{
+    position: absolute;
+    padding-top: 0.1rem;
+    font-size: 0.22rem;
+    color: #FFFFFF;
+    &.server_subtitle{
+        left: 20%;
+        top: 55%;
+    }
+    &.about_subtitle{
+        transform: translate(-50%,-23%);
+        left: 50%;
+        top: 46%;
+    }
+    &.case_subtitle{
+       transform: translate(0,-46%);
+        left: 30%;
+        top: 46%;
+    }
+  }
+  .server_box{
+    width: 100%;
+    .shadow();
+    .server_type{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      a{
+        padding: 20px 0;
+        font-size: 0.16rem;
+      }
+    }
+  }
+  
