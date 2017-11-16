@@ -6,7 +6,7 @@
 	    	<p class="subtitle">展示企业文化，宣传企业美好形象</p>
       	 <el-row class="show_content">
 	        <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8"  v-for="(it,index) in list" :key="index" class="show_item">
-	          <div class="website_icon"></div>
+	          <div class="website_icon" :class="it.icon"></div>
 		    		<p class="title">{{it.title}}</p>
 		    		<div>{{it.html}}</div>
 	        </el-col>
@@ -21,7 +21,7 @@
 		    	<p class="subtitle">综合性互联网信息资源并提供有关信息服务的应用系统</p>
 	      	 <el-row class="show_content">
 		        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12"  v-for="(it,index) in list2" :key="index" class="show_item">
-		          <div class="website_icon"></div>
+		          <div class="website_icon" :class="it.icon"></div>
 			    		<p class="title">{{it.title}}</p>
 			    		<div>{{it.html}}</div>
 		        </el-col>
@@ -36,7 +36,7 @@
 	    	<p class="subtitle">我们是致力于企、事业单位,政府部门的互联网信息化整体解决方案提供</p>
       	 <el-row class="show_content">
 	        <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8"  v-for="(it,index) in list3" :key="index" class="show_item">
-	          <div class="website_icon"></div>
+	          <div class="website_icon" :class="it.icon"></div>
 		    		<p class="title">{{it.title}}</p>
 		    		<div>{{it.html}}</div>
 	        </el-col>
@@ -112,7 +112,7 @@ export default {
 		line-height: 60px;
 	}
 	p.subtitle{
-		font-size: 0.24rem;
+		font-size: 0.2rem;
 		color: #999;
 		line-height: 30px;
 		padding-bottom: 20px;
@@ -150,8 +150,42 @@ export default {
 					background: url(../../../static/images/goodimg.png) no-repeat;
 					background-position: -98px 0;
 				}
+				&.icon6{
+					background: url(../../../static/images/goodimg.png) no-repeat;
+					background-position: -281px -48px;
+				}
+				&.icon7{
+					background: url(../../../static/images/goodimg.png) no-repeat;
+					background-position: -405px -48px;
+				}
+				&.icon8{
+					background: url(../../../static/images/goodimg.png) no-repeat;
+					background-position: -320px -48px;
+				}
+				&.icon4{
+					background: url(../../../static/images/goodimg.png) no-repeat;
+					background-position: 0 -49px;
+				}
+				&.icon5{
+					background: url(../../../static/images/goodimg.png) no-repeat;
+					background-position: -147px 0;
+				}
 			}
-			
+			.website_icon2{
+				width: 62px;
+				height: 48px;
+				margin: 0 auto;
+			}
+			.website_icon3{
+				width: 39px;
+				height: 48px;
+				margin: 0 auto;
+			}
+			.website_icon4{
+				width: 33px;
+				height: 48px;
+				margin: 0 auto;
+			}
 		}
 	}
 }
@@ -159,113 +193,5 @@ export default {
 	width: 100%;
 	background: #f2f2f2;
 }
-	.out_box{
-		width: 100%;
-		.website_icon{
-			width: 48px;
-			height: 48px;
-			margin: 0 auto;
-		}
-		h1.title{
-			font-size: 0.36rem;
-			line-height: 60px;
-		}
-		p.subtitle{
-			font-size: 0.24rem;
-			color: #999;
-			line-height: 30px;
-			padding-bottom: 20px;
-		}
-		ul li{
-			padding: 20px 0 30px;
-			div{
-				line-height: 23px;
-				font-size: 0.14rem;
-				color: #999;
-			}
-			p.title{
-				line-height: 50px;
-				font-size: 0.2rem;
-			}
-		}
-		.website_box{
-			width: 100%;
-			margin: 0 auto;
-			padding: 80px 0 60px;
-			ul{
-				display: flex;
-				li{
-					width: 33%;
-				}
-				li.item{
-					padding-right:20px;
-				}
-				.icon1{
-					background: url(../../../static/images/goodimg.png);
-				}
-				.website_icon3{
-					width: 39px;
-					height: 48px;
-					margin: 0 auto;
-				}
-				.website_icon4{
-					width: 33px;
-					height: 48px;
-					margin: 0 auto;
-				}
-				.icon2{
-					background: url(../../../static/images/goodimg.png) no-repeat;
-					background-position: -49px 0;
-				}
-				.icon3{
-					background: url(../../../static/images/goodimg.png) no-repeat;
-					background-position: -98px 0;
-				}
-				.icon6{
-					background: url(../../../static/images/goodimg.png) no-repeat;
-					background-position: -281px -48px;
-				}
-				.icon7{
-					background: url(../../../static/images/goodimg.png) no-repeat;
-					background-position: -405px -48px;
-				}
-				.icon8{
-					background: url(../../../static/images/goodimg.png) no-repeat;
-					background-position: -320px -48px;
-				}
-			}
-		}
-	}
-	.banner{
-		display: block;
-		width: 100%;
-	}
-	.industry{
-		width: 100%;
-		background: #f2f2f2;
-		padding:80px 0;
-		.industry_box{
-			margin: 0 auto;
-			 ul{
-				display: flex;
-				justify-content: space-around;
-				.website_icon2{
-					width: 62px;
-					height: 48px;
-					margin: 0 auto;
-				}
-				.icon4{
-					background: url(../../../static/images/goodimg.png) no-repeat;
-					background-position: 0 -49px;
-				}
-				.icon5{
-					background: url(../../../static/images/goodimg.png) no-repeat;
-					background-position: -147px 0;
-				}
-			}
-		}
-	}
-	div.title{
-		width: 450px;
-	}
+
 </style>
