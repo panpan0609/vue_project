@@ -1,5 +1,7 @@
 <template>
   <div class="footer">
+  	<el-container class="show_outbox">
+      <el-main class="show_box">
   	<el-row class="footer hidden-xs-only">
 	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
 	    	<h2>服务项目</h2>
@@ -31,13 +33,17 @@
     				<img src="../../static/images/HT-code.png" class="code" alt="">
     			</li>
 	    </el-col>
-	  </el-row>  
-	  <div class="footer_box  hidden-xs-only">
-	   	<div class="footer_copyright">
-	    	<span>广东天软农联信息科技有限公司版权所有·粤ICP备16080075号-1</span>
-	    	<span>友情链接: 中华贺氏湖南商会网 精品农联网</span>
-	    </div>
-   </div>
+	  </el-row> 
+	   </el-main> 
+  </el-container> 
+  
+	<div class="footer_box  hidden-xs-only">
+		   	<div class="footer_copyright">
+		    	<span>广东天软农联信息科技有限公司版权所有·粤ICP备16080075号-1</span>
+		    	<span>友情链接: 中华贺氏湖南商会网 精品农联网</span>
+		    </div>
+  </div>
+  
     	<el-collapse  class="collspse_box" v-model="activeName" accordion>
 			  <el-collapse-item class="collspse_item" :xs="24" title="服务项目" name="1">
 			    <router-link  :to="item.to" v-for="(item,index) of list1" :key="index" tag="li" class="li">
@@ -55,7 +61,7 @@
 	        </router-link>
 			  </el-collapse-item>
 			  <el-collapse-item class="collspse_item" :xs="24" title="联系我们" name="4">
-			    <router-link  :to="item.to" v-for="(item,index) of list3" :key="index" tag="li" class="li">
+			    <router-link  :to="item.to" v-for="(item,index) of list4" :key="index" tag="li" class="li">
 	            {{item.html}}
 	        </router-link>
 	  		</el-collapse-item>
@@ -74,36 +80,6 @@ export default {
   data(){
   	return{
       list1:[{
-        name: 'Index',
-        to: '/',
-        html: '网站首页'
-      },
-      {
-        name: 'Server',
-        to: '/server',
-        html: '服务项目'
-      },
-      {
-        name: 'About',
-        to: '/about',
-        html: '关于我们'
-      },
-      {
-        name: 'Case',
-        to: '/case',
-        html: '开发案例'
-      },
-      {
-        name: 'Connection',
-        to: '/connection',
-        html: '联系我们'
-      },
-      {
-        name: 'Activity',
-        to: '/activity',
-        html: '宗亲活动'
-      }],
-      list2:[{
         name: 'Website',
         to: '/server',
         html: '网站系统开发'
@@ -127,6 +103,26 @@ export default {
         name: 'Mobile',
         to: '/server/mobile',
         html: '移动APP开发'
+      }],
+       list2:[{
+        name: 'Introduction',
+        to: '/about',
+        html: '公司介绍'
+      },
+      {
+        name: 'Cultural',
+        to: '/about/cultural',
+        html: '文化理念'
+      },
+      {
+        name: 'News',
+        to: '/about/news',
+        html: '新闻动态'
+      },
+      {
+        name: 'Partner',
+        to: '/about/partner',
+        html: '合作伙伴'
       }],
       list3:[{
         name: 'Food',
@@ -214,6 +210,7 @@ export default {
 		display: none;
 	}
 	.footer_copy{
+		display: none;
 		background-color: #373D47;
 		text-align: center;
 		div{
@@ -226,6 +223,9 @@ export default {
 	
 	@media only screen and (max-width: 767px){
 		.collspse_box{
+			display: block;
+		}
+		.footer_copy{
 			display: block;
 		}
 	}

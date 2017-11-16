@@ -108,6 +108,26 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+/*公用样式*/
+.show_outbox {
+	margin-right: auto;
+	margin-left: auto
+}
+@media (min-width:768px) {
+	.show_outbox {
+		width: 750px
+	}
+}
+@media (min-width:992px) {
+	.show_outbox {
+		width: 970px
+	}
+}
+@media (min-width:1200px) {
+	.show_outbox {
+		width: 1170px
+	}
+}
 html,body{
   font-size:100px;
   width: 100%;

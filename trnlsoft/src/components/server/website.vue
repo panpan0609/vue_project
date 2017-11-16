@@ -11,81 +11,39 @@
 		    		<div>{{it.html}}</div>
 	        </el-col>
 	      </el-row>
-	      <img src="../../../static/images/com123.jpg" class="banner" alt="">
+	      <img src="../../../static/images/com123.jpg" class="banner" alt="">   
       </el-main> 
     </el-container>
-      
-    <div class="website_box">
-    	<h1 class="title">企业网站</h1>
-	    <p class="subtitle">展示企业文化，宣传企业美好形象</p>
-	    <ul>
-	    	<li class="item">
-	    		<div class="website_icon icon1"></div>
-	    		<p class="title">页面设计</p>
-	    		<div>从网站的主色调、副色调、边框风格到页头风格、导航、
-	    		广告显示等信息全部可以自由设定，可以做到完全独一无
-	    		二的网站。</div>
-	    	</li>
-	    	<li class="item">
-	    		<div class="website_icon icon2"></div>
-	    		<p class="title">页面设计</p>
-	    		<div>从网站的主色调、副色调、边框风格到页头风格、导航、
-	    		广告显示等信息全部可以自由设定，可以做到完全独一无
-	    		二的网站。</div>
-	    	</li>
-	    	<li>
-	    		<div class="website_icon icon3"></div>
-	    		<p class="title">页面设计</p>
-	    		<div>从网站的主色调、副色调、边框风格到页头风格、导航、
-	    		广告显示等信息全部可以自由设定，可以做到完全独一无
-	    		二的网站。</div>
-	    	</li>
-	    </ul>
-	    <img src="../../../static/images/com123.jpg" class="banner" alt="">
+    <div class="content_bg">
+	    <el-container class="show_outbox">
+	      <el-main class="show_box">
+	      	<h1 class="title">行业门户网站</h1>
+		    	<p class="subtitle">综合性互联网信息资源并提供有关信息服务的应用系统</p>
+	      	 <el-row class="show_content">
+		        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12"  v-for="(it,index) in list2" :key="index" class="show_item">
+		          <div class="website_icon"></div>
+			    		<p class="title">{{it.title}}</p>
+			    		<div>{{it.html}}</div>
+		        </el-col>
+		      </el-row>
+		      <img src="../../../static/images/menhu123.jpg" class="banner" alt="">
+	      </el-main> 
+	    </el-container>  
     </div>
-    <div class="industry">
-    	<div class="industry_box">
-    		<h1 class="title">行业门户网站</h1>
-		    <p class="subtitle">综合性互联网信息资源并提供有关信息服务的应用系统</p>
-		    <ul>
-		    	<li class="item">
-		    		<div class="website_icon icon4"></div>
-		    		<p class="title">包含各类门户网站</p>
-		    		<div class="title">包括综合性门户网站，地方生活门户，个人门户以及搜索引擎式门户网站。</div>
-		    	</li>
-		    	<li class="item">
-		    		<div class="website_icon2 icon5"></div>
-		    		<p class="title">门户网站的作用</p>
-		    		<div class="title">通过互联网来宣传企业、开拓市场，降低企业的管理成本、交易成本和售后服务成本，
-		    		并通过开展一系列的电子商务活动获得更多利润。</div>
-		    	</li>
-		    </ul>
-		    <img src="../../../static/images/menhu123.jpg" class="banner" alt="">
-    	</div>
-    </div>
-    <div class="website_box">
-    	<h1 class="title">政府政务平台</h1>
-	    <p class="subtitle">我们是致力于企、事业单位,政府部门的互联网信息化整体解决方案提供</p>
-	    <ul>
-	    	<li class="item">
-	    		<div class="website_icon3 icon6"></div>
-	    		<p class="title">报表</p>
-	    		<div>多维度的报表系统，您可以按时间段查询，并且可以按“月”、“周”、“日”
-	    		等数据对比，查看走势。支持可视化统计图。</div>
-	    	</li>
-	    	<li class="item">
-	    		<div class="website_icon icon7"></div>
-	    		<p class="title">无纸化</p>
-	    		<div>通过平台可实行无纸化政府平台运作，有效提高效率并减少政府办公经费，环保节能。</div>
-	    	</li>
-	    	<li>
-	    		<div class="website_icon4 icon8"></div>
-	    		<p class="title">电子政务</p>
-	    		<div>电子政务将政府工作更公开、更透明，并且为企业和居民提供更好的服务</div>
-	    	</li>
-	    </ul>
-	    <img src="../../../static/images/zhengfu123.jpg" class="banner" alt="">
-    </div>
+    <el-container class="show_outbox">
+      <el-main class="show_box">
+      	<h1 class="title">政府政务平台</h1>
+	    	<p class="subtitle">我们是致力于企、事业单位,政府部门的互联网信息化整体解决方案提供</p>
+      	 <el-row class="show_content">
+	        <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8"  v-for="(it,index) in list3" :key="index" class="show_item">
+	          <div class="website_icon"></div>
+		    		<p class="title">{{it.title}}</p>
+		    		<div>{{it.html}}</div>
+	        </el-col>
+	      </el-row>
+	      <img src="../../../static/images/zhengfu123.jpg" class="banner" alt="">   
+      </el-main> 
+    </el-container>  	       
   </div>
 </template>
 
@@ -110,6 +68,35 @@ export default {
   				title:"响应式网页",
   				html:"让你的网站同时支持PC桌面级浏览，平板电脑，手机屏幕等各种屏幕，完美流畅浏览页面。"
   			}
+  		],
+  		list2:[
+  			{
+  				icon:"icon4",
+  				title:"包含各类门户网站",
+  				html:"包括综合性门户网站，地方生活门户，个人门户以及搜索引擎式门户网站。"
+  			},
+  			{
+  				icon:"icon5",
+  				title:"门户网站的作用",
+  				html:"通过互联网来宣传企业、开拓市场，降低企业的管理成本、交易成本和售后服务成本，并通过开展一系列的电子商务活动获得更多利润。"
+  			}
+  		],
+  		list3:[
+  			{
+  				icon:"icon6",
+  				title:"报表",
+  				html:"多维度的报表系统，您可以按时间段查询，并且可以按“月”、“周”、“日”等数据对比，查看走势。支持可视化统计图。"
+  			},
+  			{
+  				icon:"icon7",
+  				title:"无纸化",
+  				html:"通过平台可实行无纸化政府平台运作，有效提高效率并减少政府办公经费，环保节能。"
+  			},
+  			{
+  				icon:"icon8",
+  				title:"电子政务",
+  				html:"电子政务将政府工作更公开、更透明，并且为企业和居民提供更好的服务"
+  			}
   		]
   	}
   }
@@ -117,27 +104,9 @@ export default {
 </script>
 
 
-<style lang="less" scoped>
-	.show_outbox {
-		margin-right: auto;
-		margin-left: auto
-	}
-	@media (min-width:768px) {
-		.show_outbox {
-			width: 750px
-		}
-	}
-	@media (min-width:992px) {
-		.show_outbox {
-			width: 970px
-		}
-	}
-	@media (min-width:1200px) {
-		.show_outbox {
-			width: 1170px
-		}
-	}
+<style lang="less" scoped>	
 .show_box{
+	padding:80px 0;
 	h1.title{
 		font-size: 0.36rem;
 		line-height: 60px;
@@ -159,7 +128,7 @@ export default {
 			padding:20px;
 			div{
 				line-height: 23px;
-				font-size: 0.14rem;
+				font-size: 0.16rem;
 				color: #999;
 			}
 			p.title{
@@ -186,7 +155,10 @@ export default {
 		}
 	}
 }
-	
+.content_bg{
+	width: 100%;
+	background: #f2f2f2;
+}
 	.out_box{
 		width: 100%;
 		.website_icon{

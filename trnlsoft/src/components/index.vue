@@ -8,7 +8,7 @@
         <button>了解详情</button>
       </div>
     </div>
-     <el-container>
+     <el-container class="show_outbox">
       <el-main class="case">
       <h2 class="case_title">有效支持客户的业务战略</h2>
       <p class="case_title">天软农联服务于互联网在多平台的解决方案</p>
@@ -59,7 +59,11 @@
             <p>紧紧围绕产品做可落地的商业创新，并根据市场目标做切实可行的产品方案。TRNL关注用户体验做可运转的高质量产品。</p>
         </el-col>
       </el-row>
-        <!-- 案例展示 -->
+      </el-main>
+    </el-container>
+    <el-container>
+    	<el-main>
+    		<!-- 案例展示 -->
         <h2 class="case_title">TRNL案例和方案展示</h2>
         <p class="case_title">我们更喜欢卷起衣袖，开始一个全新的项目。</p>
         <el-row class="show_list">
@@ -70,7 +74,7 @@
                 </div>
           </el-col>
         </el-row>
-      </el-main>
+    	</el-main>
     </el-container>
    
   </div>
@@ -212,8 +216,8 @@ export default {
 	  }
   }
 }
-  .case{
-    h2{
+.box{
+	h2{
       font-size: 0.24rem;
     }
     h2.case_title{
@@ -224,6 +228,8 @@ export default {
       color: #999;
       font-size: 0.16rem;
     }
+}
+  .case{
     .show_case{
       padding-bottom: 50px;
       border-bottom: 1px solid #EEEEEE;
@@ -317,7 +323,8 @@ export default {
         width: 300px;
       }
     }
-    .show_list{
+  }
+  .show_list{
       .show_item{
         position: relative;
         overflow: hidden;
@@ -352,7 +359,4 @@ export default {
         }
       }
     }
-   
-  }
-  
 </style>

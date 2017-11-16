@@ -5,10 +5,12 @@
   	   <h2 class="title case_title">提供优秀产品，帮客户创造价值</h2>
     	<p class="sub_title case_subtitle">--用事实说话！</p>
       <div class="server_box">
-       <div class="server_type">
-          <router-link :to="item.to" v-for="(item,index) in list" :key="index">{{item.html}}</router-link>
-        </div>
-    </div>
+      	<div class="show_outbox">
+       		<div class="server_type">
+	          <router-link :to="item.to" v-for="(item,index) in list" :key="index">{{item.html}}</router-link>
+	        </div>
+	      </div>
+	    </div>
     <router-view></router-view>
   </div>
 </template>

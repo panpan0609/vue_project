@@ -3,12 +3,15 @@
   	<div class="index_banner server_banner">  		
   	</div>
     <h2 class="title server_title">拒绝模板 支持高端定制</h2>
-    <p class="sub_title server_subtitle">--TRNL</p>
+    <p class="sub_title server_subtitle">--TRNL</p>   
     <div class="server_box">
+    	<div class="show_outbox">
        <div class="server_type">
           <router-link :to="item.to" v-for="(item,index) in list" :key="index">{{item.html}}</router-link>
         </div>
+      </div>
     </div>
+	 
     <router-view class="aaa"></router-view>
   </div>
 </template>

@@ -5,9 +5,11 @@
     <h2 class="title about_title">拒绝模板 支持高端定制</h2>
     <p class="sub_title about_subtitle">TRNL</p>
     <div class="server_box">
-       <div class="server_type">
+    	<div class="show_outbox">
+       	<div class="server_type">
           <router-link :to="item.to" v-for="(item,index) in list" :key="index">{{item.html}}</router-link>
         </div>
+      </div>
     </div>
     <router-view></router-view>
   </div>

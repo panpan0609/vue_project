@@ -3,9 +3,9 @@
 .index_banner {
   position: relative;
   width: 100%;
-  height: 570px;
-  min-height: 570px;
+  height: 550px;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .index_banner.server_banner {
@@ -19,6 +19,9 @@
 }
 .index_banner.connect_banner {
   background-image: url("../../static/images/22.jpg");
+}
+.index_banner.activity_banner {
+  background-image: url("../../static/images/31.jpg");
 }
 h2.title {
   position: absolute;
