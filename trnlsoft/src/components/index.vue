@@ -29,12 +29,12 @@
             <p>我们的成员来自顶尖互联网公司和一流大学，有丰富的产品开发经验。基于合作双赢模式，为您打造优质产品。</p>
         </el-col>
         <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img">
-            <img src="static/images/chengyuan-01.png" alt="">
+            <img src="/static/images/chengyuan-01.png" alt="">
         </el-col>
       </el-row>
       <el-row class="show_type">
         <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img">
-            <img src="static/images/liucheng-01.png" alt="">
+            <img src="/static/images/liucheng-01.png" alt="">
         </el-col>
         <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_item">
             <h2>专业流程化制作产品</h2>
@@ -47,12 +47,12 @@
             <p>从研究中发现体验价值，并将其转化为符合使用场景和用户真正需求的交互模型。为品牌与用户之间提供最有效的沟通方式及具有创新性和直觉性的信息组织方式。</p>
         </el-col>
         <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img">
-            <img src="static/images/unknow-1-01.png" alt="">
+            <img src="/static/images/unknow-1-01.png" alt="">
         </el-col>
       </el-row>
       <el-row class="show_type">
         <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img">
-            <img src="static/images/unknow-2-01.png" alt="">
+            <img src="/static/images/unknow-2-01.png" alt="">
         </el-col>
         <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_item">
             <h2>为客户带来真实有效的收益</h2>
@@ -89,50 +89,50 @@ export default {
   data() {
     return{
       list:[{
-        src: 'static/images/case1.png',
+        src: '/static/images/case1.png',
         detailShow: false
       },
       {
-        src: 'static/images/case2.png',
+        src: '/static/images/case2.png',
         detailShow: false
       },
       {
-        src: 'static/images/case3.png',
+        src: '/static/images/case3.png',
         detailShow: false
       },
       {
-        src: 'static/images/case4.png',
+        src: '/static/images/case4.png',
         detailShow: false
       },
       {
-        src: 'static/images/case5.png',
+        src: '/static/images/case5.png',
         detailShow: false
       },
       {
-        src: 'static/images/case6.png',
+        src: '/static/images/case6.png',
         detailShow: false
       }],
       lis:[{
-        src:'static/images/app-01.png',
+        src:'/static/images/app-01.png',
         title:'APP开发',
         subtitle:'基于iOS、Android平台帮助您开发各类APP，涵盖各领域'
       },
       {
-        src:'static/images/website-01.png',
+        src:'/static/images/website-01.png',
         title:'网站&H5开发',
         subtitle:'从需求分析到前端设计开发，最后后期质保完整流程方案'
       },
       {
-        src:'static/images/weixin-01.png',
+        src:'/static/images/weixin-01.png',
         title:'微信开发',
         subtitle:'基于微信平台实现订阅号、服务号、企业号和应用号开发产品'
       },
       {
-        src:'static/images/o2o-01.png',
+        src:'/static/images/o2o-01.png',
         title:'O2O平台开发',
         subtitle:'敏锐观察行业需求和痛点，做可以落地实在的平台'
       },{
-        src:'static/images/ruanjian-01.png',
+        src:'/static/images/ruanjian-01.png',
         title:'软件定制',
         subtitle:'根据企业个性化定制软件，让软件适应企业发展'
       }],
@@ -335,19 +335,19 @@ export default {
           top: 0;
           bottom: 0;
           background: rgba(0,0,0,.5);
-        }
-        .mask span{
-          width: 100px;
-          height: 30px;
-          line-height: 30px;
-          font-size:0.12rem;
-          border: 2px solid #ffffff;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          margin:-15px -50px;  
-          font-weight: bold;
-          color: #ffffff;
+          span{
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            font-size:0.12rem;
+            border: 2px solid #ffffff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin:-15px -50px;  
+            font-weight: bold;
+            color: #ffffff;
+          }
         }
         img{
           width: 100%;

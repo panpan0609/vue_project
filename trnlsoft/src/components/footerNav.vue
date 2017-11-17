@@ -2,38 +2,38 @@
   <div class="footer">
   	<el-container class="show_outbox">
       <el-main class="show_box">
-  	<el-row class="footer hidden-xs-only">
-	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
-	    	<h2>服务项目</h2>
-		    <router-link  :to="item.to" v-for="(item,index) of list1" :key="index" tag="li">
-	        {{item.html}}
-	    	</router-link>
-	    </el-col>
-	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
-	    	<h2>关于我们</h2>
-		    <router-link  :to="item.to" v-for="(item,index) of list2" :key="index" tag="li">
-            {{item.html}}
-        </router-link>
-	    </el-col>
-	    <el-col :sm="4" :md="4" :lg="4" :xl="4">
-	    	<h2>开发实例</h2>
-		    <router-link  :to="item.to" v-for="(item,index) of list3" :key="index" tag="li">
-            {{item.html}}
-        </router-link>
-	    </el-col>
-	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
-	    	<h2>联系我们</h2>
-		   	<router-link  :to="item.to" v-for="(item,index) of list3" :key="index" tag="li">
-            {{item.html}}
-        </router-link>
-	    </el-col>
-	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
-	    	<h2>微信咨询</h2>
-		    	<li>
-    				<img src="../../static/images/HT-code.png" class="code" alt="">
-    			</li>
-	    </el-col>
-	  </el-row> 
+      	<el-row class="footer hidden-xs-only">
+    	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
+    	    	<h2>服务项目</h2>
+    		    <router-link  :to="item.to" v-for="(item,index) of list1" :key="index" tag="li">
+    	        {{item.html}}
+    	    	</router-link>
+    	    </el-col>
+    	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
+    	    	<h2>关于我们</h2>
+    		    <router-link  :to="item.to" v-for="(item,index) of list2" :key="index" tag="li">
+                {{item.html}}
+            </router-link>
+    	    </el-col>
+    	    <el-col :sm="4" :md="4" :lg="4" :xl="4">
+    	    	<h2>开发实例</h2>
+    		    <router-link  :to="item.to" v-for="(item,index) of list3" :key="index" tag="li">
+                {{item.html}}
+            </router-link>
+    	    </el-col>
+    	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
+    	    	<h2>联系我们</h2>
+    		   	<router-link  :to="item.to" v-for="(item,index) of list3" :key="index" tag="li">
+                {{item.html}}
+            </router-link>
+    	    </el-col>
+    	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
+    	    	<h2>微信咨询</h2>
+    		    	<li>
+        				<img src="../../static/images/HT-code.png" class="code" alt="">
+        			</li>
+    	    </el-col>
+    	  </el-row> 
 	   </el-main> 
   </el-container> 
   
@@ -220,7 +220,6 @@ export default {
 			color: #FFFFFF;
 		}
 	}
-	
 	@media only screen and (max-width: 767px){
 		.collspse_box{
 			display: block;

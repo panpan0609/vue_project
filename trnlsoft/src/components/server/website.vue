@@ -11,7 +11,7 @@
 		    		<div>{{it.html}}</div>
 	        </el-col>
 	      </el-row>
-	      <img src="../../../static/images/com123.jpg" class="banner" alt="">   
+	      <img src="/static/images/com123.jpg" class="banner" alt="">   
       </el-main> 
     </el-container>
     <div class="content_bg">
@@ -26,7 +26,7 @@
 			    		<div>{{it.html}}</div>
 		        </el-col>
 		      </el-row>
-		      <img src="../../../static/images/menhu123.jpg" class="banner" alt="">
+		      <img src="/static/images/menhu123.jpg" class="banner" alt="">
 	      </el-main> 
 	    </el-container>  
     </div>
@@ -41,7 +41,7 @@
 		    		<div>{{it.html}}</div>
 	        </el-col>
 	      </el-row>
-	      <img src="../../../static/images/zhengfu123.jpg" class="banner" alt="">   
+	      <img src="/static/images/zhengfu123.jpg" class="banner" alt="">   
       </el-main> 
     </el-container>  	       
   </div>
@@ -140,34 +140,34 @@ export default {
 				height: 48px;
 				margin: 0 auto;
 				&.icon1{
-					background: url(../../../static/images/goodimg.png);
+					background: url('/static/images/goodimg.png');
 				}
 				&.icon2{
-					background: url(../../../static/images/goodimg.png) no-repeat;
+					background: url('/static/images/goodimg.png') no-repeat;
 					background-position: -49px 0;
 				}
 				&.icon3{
-					background: url(../../../static/images/goodimg.png) no-repeat;
+					background: url('/static/images/goodimg.png') no-repeat;
 					background-position: -98px 0;
 				}
 				&.icon6{
-					background: url(../../../static/images/goodimg.png) no-repeat;
+					background: url('/static/images/goodimg.png') no-repeat;
 					background-position: -281px -48px;
 				}
 				&.icon7{
-					background: url(../../../static/images/goodimg.png) no-repeat;
+					background: url('/static/images/goodimg.png') no-repeat;
 					background-position: -405px -48px;
 				}
 				&.icon8{
-					background: url(../../../static/images/goodimg.png) no-repeat;
+					background: url('/static/images/goodimg.png') no-repeat;
 					background-position: -320px -48px;
 				}
 				&.icon4{
-					background: url(../../../static/images/goodimg.png) no-repeat;
+					background: url('/static/images/goodimg.png') no-repeat;
 					background-position: 0 -49px;
 				}
 				&.icon5{
-					background: url(../../../static/images/goodimg.png) no-repeat;
+					background: url('/static/images/goodimg.png') no-repeat;
 					background-position: -147px 0;
 				}
 			}

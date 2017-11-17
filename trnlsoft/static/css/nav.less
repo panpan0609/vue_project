@@ -7,19 +7,19 @@
     background-position: center;
     background-repeat: no-repeat;
     &.server_banner{
-        .bg-image('../../static/images/17.jpg');
+        .bg-image('/static/images/17.jpg');
     }
     &.about_banner{
-        .bg-image('../../static/images/11.jpg');
+        .bg-image('/static/images/11.jpg');
     }
     &.case_banner{
-        .bg-image('../../static/images/9.jpg');
+        .bg-image('/static/images/9.jpg');
     }
     &.connect_banner{
-        .bg-image('../../static/images/22.jpg');
+        .bg-image('/static/images/22.jpg');
     }
     &.activity_banner{
-        .bg-image('../../static/images/31.jpg');
+        .bg-image('/static/images/31.jpg');
     }
   }
   h2.title{
@@ -74,4 +74,18 @@
       }
     }
   }
-  
+  .collspse_box{
+    display: none;
+    .li{
+        font-size: 0.16rem;
+        color: #919399;
+        line-height: 48px;
+        height: 48px;
+        cursor: pointer;
+    }
+  }
+@media only screen and (max-width: 767px){
+    .collspse_box{
+        display: block;
+    }
+}

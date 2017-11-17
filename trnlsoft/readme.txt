@@ -34,7 +34,7 @@
 
 8.npm install --save particles.js 安装插件 particles
 
-
+9.npm install vuejs-paginate --save 安装vue分页插件
 
 项目目录
 |-- build                            // 项目构建(webpack)相关代码
