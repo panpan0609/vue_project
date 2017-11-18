@@ -76,14 +76,14 @@ export default {
   				html:"包括综合性门户网站，地方生活门户，个人门户以及搜索引擎式门户网站。"
   			},
   			{
-  				icon:"icon5",
+  				icon:"icon5 website_icon2",
   				title:"门户网站的作用",
   				html:"通过互联网来宣传企业、开拓市场，降低企业的管理成本、交易成本和售后服务成本，并通过开展一系列的电子商务活动获得更多利润。"
   			}
   		],
   		list3:[
   			{
-  				icon:"icon6",
+  				icon:"icon6 website_icon3",
   				title:"报表",
   				html:"多维度的报表系统，您可以按时间段查询，并且可以按“月”、“周”、“日”等数据对比，查看走势。支持可视化统计图。"
   			},
@@ -93,7 +93,7 @@ export default {
   				html:"通过平台可实行无纸化政府平台运作，有效提高效率并减少政府办公经费，环保节能。"
   			},
   			{
-  				icon:"icon8",
+  				icon:"icon8 website_icon4",
   				title:"电子政务",
   				html:"电子政务将政府工作更公开、更透明，并且为企业和居民提供更好的服务"
   			}
@@ -106,7 +106,7 @@ export default {
 
 <style lang="less" scoped>	
 .show_box{
-	padding:80px 0;
+	padding:80px 20px;
 	h1.title{
 		font-size: 0.36rem;
 		line-height: 60px;
@@ -119,7 +119,6 @@ export default {
 	}
 	.banner{
 		width: 100%;
-		height: 345px;
 		display: block;
 		margin-top: 30px;
 	}
@@ -127,8 +126,8 @@ export default {
 		.show_item{
 			padding:20px;
 			div{
-				line-height: 23px;
-				font-size: 0.16rem;
+				line-height: 0.23rem;
+				font-size: 0.14rem;
 				color: #999;
 			}
 			p.title{
@@ -150,41 +149,41 @@ export default {
 					background: url('/static/images/goodimg.png') no-repeat;
 					background-position: -98px 0;
 				}
-				&.icon6{
-					background: url('/static/images/goodimg.png') no-repeat;
-					background-position: -281px -48px;
-				}
 				&.icon7{
 					background: url('/static/images/goodimg.png') no-repeat;
 					background-position: -405px -48px;
 				}
-				&.icon8{
-					background: url('/static/images/goodimg.png') no-repeat;
-					background-position: -320px -48px;
-				}
 				&.icon4{
 					background: url('/static/images/goodimg.png') no-repeat;
 					background-position: 0 -49px;
-				}
-				&.icon5{
-					background: url('/static/images/goodimg.png') no-repeat;
-					background-position: -147px 0;
 				}
 			}
 			.website_icon2{
 				width: 62px;
 				height: 48px;
 				margin: 0 auto;
+				&.icon5{
+					background: url('/static/images/goodimg.png') no-repeat;
+					background-position: -147px 0;
+				}
 			}
 			.website_icon3{
 				width: 39px;
 				height: 48px;
 				margin: 0 auto;
+				&.icon6{
+					background: url('/static/images/goodimg.png') no-repeat;
+					background-position: -281px -48px;
+				}
 			}
 			.website_icon4{
 				width: 33px;
 				height: 48px;
 				margin: 0 auto;
+				&.icon8{
+					background: url('/static/images/goodimg.png') no-repeat;
+					background-position: -320px -48px;
+				}
 			}
 		}
 	}
@@ -193,5 +192,9 @@ export default {
 	width: 100%;
 	background: #f2f2f2;
 }
-
+@media only screen and (max-width: 767px){
+	.show_box{
+		padding:30px 20px;
+	}
+}
 </style>

@@ -5,26 +5,26 @@
       	<el-row class="footer hidden-xs-only">
     	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
     	    	<h2>服务项目</h2>
-    		    <router-link  :to="item.to" v-for="(item,index) of list1" :key="index" tag="li">
-    	        {{item.html}}
+    		    <router-link  :to="item.to" v-for="(item,index) of list1" :key="index" tag="li" @mouseenter.native="mouseenter(item)" @mouseleave.native="mouseleave(item)">
+    	        <span :class="{showborder:item.detailShow}">{{item.html}}</span>
     	    	</router-link>
     	    </el-col>
     	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
     	    	<h2>关于我们</h2>
-    		    <router-link  :to="item.to" v-for="(item,index) of list2" :key="index" tag="li">
-                {{item.html}}
+    		    <router-link  :to="item.to" v-for="(item,index) of list2" :key="index" tag="li" @mouseenter.native="mouseenter(item)" @mouseleave.native="mouseleave(item)">
+              <span :class="{showborder:item.detailShow}">{{item.html}}</span>
             </router-link>
     	    </el-col>
     	    <el-col :sm="4" :md="4" :lg="4" :xl="4">
     	    	<h2>开发实例</h2>
-    		    <router-link  :to="item.to" v-for="(item,index) of list3" :key="index" tag="li">
-                {{item.html}}
+    		    <router-link  :to="item.to" v-for="(item,index) of list3" :key="index" tag="li" @mouseenter.native="mouseenter(item)" @mouseleave.native="mouseleave(item)">
+              <span :class="{showborder:item.detailShow}">{{item.html}}</span>
             </router-link>
     	    </el-col>
     	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
     	    	<h2>联系我们</h2>
-    		   	<router-link  :to="item.to" v-for="(item,index) of list3" :key="index" tag="li">
-                {{item.html}}
+    		   	<router-link  :to="item.to" v-for="(item,index) of list4" :key="index" tag="li" @mouseenter.native="mouseenter(item)" @mouseleave.native="mouseleave(item)">
+              <span :class="{showborder:item.detailShow}">{{item.html}}</span>
             </router-link>
     	    </el-col>
     	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
@@ -82,89 +82,104 @@ export default {
       list1:[{
         name: 'Website',
         to: '/server',
-        html: '网站系统开发'
+        html: '网站系统开发',
+        detailShow: false
       },
       {
         name: 'Customization',
         to: '/server/customization',
-        html: '软件定制服务'
+        html: '软件定制服务',
+        detailShow: false
       },
       {
         name: 'Platform',
         to: '/server/platform',
-        html: '电商平台开发'
+        html: '电商平台开发',
+        detailShow: false
       },
       {
         name: 'Wechat',
         to: '/server/wechat',
-        html: '微信公众号深度开发'
+        html: '微信公众号深度开发',
+        detailShow: false
       },
       {
         name: 'Mobile',
         to: '/server/mobile',
-        html: '移动APP开发'
+        html: '移动APP开发',
+        detailShow: false
       }],
        list2:[{
         name: 'Introduction',
         to: '/about',
-        html: '公司介绍'
+        html: '公司介绍',
+        detailShow: false
       },
       {
         name: 'Cultural',
         to: '/about/cultural',
-        html: '文化理念'
+        html: '文化理念',
+        detailShow: false
       },
       {
         name: 'News',
         to: '/about/news',
-        html: '新闻动态'
+        html: '新闻动态',
+        detailShow: false
       },
       {
         name: 'Partner',
         to: '/about/partner',
-        html: '合作伙伴'
+        html: '合作伙伴',
+        detailShow: false
       }],
       list3:[{
         name: 'Food',
         to: '/case',
-        html: '美食APP'
+        html: '美食APP',
+        detailShow: false
       },
       {
         name: 'Vegetarian',
         to: '/case/vegetarian',
-        html: '素食APP'
+        html: '素食APP',
+        detailShow: false
       },
       {
         name: 'Pineapple',
         to: '/case/pineapple',
-        html: '菠萝油'
+        html: '菠萝油',
+        detailShow: false
       },
       {
         name: 'Flow',
         to: '/case/flow',
-        html: '流量无忧'
+        html: '流量无忧',
+        detailShow: false
       }],
       list4:[{
         name: 'Company',
         to: '/connection',
-        html: '广州总公司'
+        html: '广州总公司',
+        detailShow: false
       },
       {
         name: 'Branch',
         to: '/connection/branch',
-        html: '顺德办事处'
+        html: '顺德办事处',
+        detailShow: false
       }],
       activeName: '0'
     }
   },
-  methods: {
-    mouseenter:function() {
-       console.log(123);
+  methods:{
+    mouseenter:function(item) {
+      item.detailShow = true;
     },
-    mouseleave:function() {
-        console.log(456);
+    mouseleave:function(item) {
+      item.detailShow = false;
     }
-  }
+	}
 }
 </script>
 
@@ -172,25 +187,31 @@ export default {
 	div.footer{
 		width: 100%;
 		background: #3D444F;
-        .footer{
-            margin: 0 auto;
-            padding: 30px 0;
-            text-align: center;
-            h2{
-                color: #FFFFFF;
-                font-size: 0.18rem;
-                padding-bottom: 0.2rem;
-            }
-            li{
-                cursor: pointer;
-                color: #999;
-                font-size: 0.14rem;
-                padding: 0.05rem 0;
-            }
-            img.code{
-                width: 85px;
-            }
+    .footer{
+        margin: 0 auto;
+        padding: 30px 0;
+        text-align: center;
+        .showborder{
+        	border-bottom: 1px solid #FFFFFF;
+        	color: #FFFFFF;
         }
+        h2{
+            color: #FFFFFF;
+            text-align: left;
+            font-size: 0.18rem;
+            padding-bottom: 0.2rem;
+        }
+        li{
+            cursor: pointer;
+            text-align: left;
+            color: #999;
+            font-size: 0.14rem;
+            padding: 0.05rem 0;
+        }
+        img.code{
+            width: 85px;
+        }
+    }
 	}
 	.footer_box{
 		width: 100%;

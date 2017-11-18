@@ -66,4 +66,13 @@ export default {
 			}
 		}
 	}
+	@media only screen and (max-width: 767px){
+	.out_box{
+		.wechat_box{
+			.show_item{
+				padding-bottom:40px;
+			}
+		}
+	}
+}
 </style>

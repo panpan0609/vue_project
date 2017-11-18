@@ -48,7 +48,7 @@ export default {
 
 <style lang="less" scoped>
 .show_box{
-	padding:50px 0;
+	padding:50px 20px;
 	h1.title{
 		font-size: 0.24rem;
 		line-height: 0.3rem;

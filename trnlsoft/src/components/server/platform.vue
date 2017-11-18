@@ -3,7 +3,7 @@
   	<el-container class="show_outbox">
       <el-main class="show_box">
       	<h2 class="title">B2C电商解决方案</h2>
-    		<p class="subtitle">B2C是商家对客户的一种电子商务模式，<br/>天软农联致力于解决企业相关行业的电子商务应用的难点痛点，规划出系统的解决方案</p>
+    		<p class="subtitle">B2C是商家对客户的一种电子商务模式,天软农联致力于解决企业相关行业的电子商务应用的难点痛点，规划出系统的解决方案</p>
     		<el-row class="show_content" >
 	        <el-col  :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
 	        	<div  v-for="(it,index) in list" :key="index" class="show_item">
@@ -24,7 +24,7 @@
 	  	<el-container class="show_outbox">
 		      <el-main class="show_box">
 		      	<h2 class="title">B2C电商解决方案</h2>
-		    		<p class="subtitle">B2B是商家与商家之间的交易活动，它也是电子商务的一种主要形式<br />
+		    		<p class="subtitle">B2B是商家与商家之间的交易活动，它也是电子商务的一种主要形式
 			企业须根据自身的发展情况，选择所需的功能，组成属于自己的电子商务网站。</p>
 		    		<el-row class="show_content" >
 		    			<el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12">
@@ -142,7 +142,7 @@ export default {
   			{
   				src:"/static/images/meirong-01.png",
   				title:"美妆洗护",
-  				html:"粉丝线上下单，卖家快递发货，适用于化妆品、美容产品和洗护类产品"
+  				html:"粉丝线上下单,卖家快递发货,适用于化妆品美容产品和洗护类产品"
   			},
   			{
   				src:"/static/images/goumai-01.png",
@@ -188,22 +188,24 @@ export default {
 	.show_item{
 		display: flex;
 		text-align: left;
+		margin-bottom: 30px;
 		img.icon{
 			width: 50px;
 			height: 50px;
-			padding-right: 20px; 
 		}
-		h2{
-			font-size: 0.18rem;
-    	color: rgb(61, 68, 79);
-			margin-bottom: 11px;
-		}
-		p{
-			font-size: 14px;
-	    line-height: 23px;
-	    color: rgb(100, 106, 117);
-	    margin-bottom: 30px;
-	    margin-top: 0;
+		.text{
+			padding-left: 20px;
+			h2{
+				font-size: 0.18rem;
+	    	color: rgb(61, 68, 79);
+				margin-bottom: 11px;
+			}
+			p{
+				font-size: 14px;
+		    line-height: 23px;
+		    color: rgb(100, 106, 117);
+		    margin-top: 0;
+			}
 		}
 	}
 	.img{
@@ -215,12 +217,12 @@ export default {
 	.case_item{
 		padding: 25px;
 		text-align: left;
+		margin-bottom: 30px;
 		img{
 			width: 60px;
 			height: 60px;
 		}
 		h2{
-			text-align: left;
 	    font-size: 18px;
 	    color: rgb(61, 68, 79);
 	    margin:0 0 11px 0;
@@ -229,8 +231,22 @@ export default {
 			font-size: 14px;
 	    line-height: 23px;
 	    color: rgb(100, 106, 117);
-	    margin:0 0 30px 0;
 		}	
+	}
+}
+@media only screen and (max-width: 767px){
+	.platform{
+		padding: 0 0 20px;
+	}
+	.box{
+		padding: 0 0 30px;
+		background: #F2F7FC;
+	}
+	.case_box {
+		.case_item{
+			padding:10px;
+			text-align: center;
+		}
 	}
 }
 </style>

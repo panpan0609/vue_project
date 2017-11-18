@@ -9,19 +9,19 @@
   background-repeat: no-repeat;
 }
 .index_banner.server_banner {
-  background-image: url("../../static/images/17.jpg");
+  background-image: url("/static/images/17.jpg");
 }
 .index_banner.about_banner {
-  background-image: url("../../static/images/11.jpg");
+  background-image: url("/static/images/11.jpg");
 }
 .index_banner.case_banner {
-  background-image: url("../../static/images/9.jpg");
+  background-image: url("/static/images/9.jpg");
 }
 .index_banner.connect_banner {
-  background-image: url("../../static/images/22.jpg");
+  background-image: url("/static/images/22.jpg");
 }
 .index_banner.activity_banner {
-  background-image: url("../../static/images/31.jpg");
+  background-image: url("/static/images/31.jpg");
 }
 h2.title {
   position: absolute;
@@ -74,4 +74,19 @@ p.sub_title.case_subtitle {
 .server_box .server_type a {
   padding: 20px 0;
   font-size: 0.16rem;
+}
+.collspse_box {
+  display: none;
+}
+.collspse_box .li {
+  font-size: 0.16rem;
+  color: #919399;
+  line-height: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .collspse_box {
+    display: block;
+  }
 }

@@ -100,9 +100,9 @@ export default {
 		}
 		p.subtitle{
 			line-height: 26px;
-		    margin-bottom: 40px;
-		    color: rgb(155, 163, 175);
-		    font-size: 16px;
+	    margin-bottom: 40px;
+	    color: rgb(155, 163, 175);
+	    font-size: 16px;
 		}
 		.show_item{
 			padding: 30px 0;
@@ -110,9 +110,9 @@ export default {
 				color: #6f7c82;
 				font-size: 0.14rem;
 				line-height: 0.20rem;
-			    max-width: 200px;
-			    margin: 0 auto;
-			    text-align: center;
+		    max-width: 200px;
+		    margin: 0 auto;
+		    text-align: center;
 			}
 			h2{
 				font-size: 0.2rem;
@@ -124,8 +124,20 @@ export default {
 			}
 		}
 		@media only screen and (max-width: 767px){
+			p.subtitle{
+				 margin-bottom: 20px;
+			}
 			.show_item{
 				padding: 10px 0;
+			}
+		}
+	}
+	@media only screen and (max-width: 767px){
+		.mobile_box{
+			padding-top: 20px;
+			h2.title{
+				font-size: 0.24rem;
+				margin: 10px 0 20px;
 			}
 		}
 	}
@@ -143,10 +155,10 @@ export default {
 		}
 		p{
 			line-height: 0.24rem;
-		    font-size: 0.14rem;
-		    color: rgb(81,81,81);
-		    margin-left: inherit;
-		    margin-right: inherit;
+	    font-size: 0.14rem;
+	    color: rgb(81,81,81);
+	    margin-left: inherit;
+	    margin-right: inherit;
 		}
 	}
 	@media only screen and (max-width: 767px){

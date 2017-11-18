@@ -55,5 +55,25 @@ export default {
 
 <style lang="less" scoped>
   @import "../../../static/css/nav.less";
-  
+  @media only screen and (max-width: 767px){
+    h2.title{
+        font-size: 0.24rem;
+        width: 300px;
+        &.case_title{
+	        left: 50%;
+			    top: 50%;
+			    width: 300px;
+			    transform: translate(-50%,-50%);
+	    	}
+    }  
+    p.sub_title{
+        font-size: 0.16rem;
+        &.case_subtitle{
+	        left: 50%;
+			    top: 55%;
+			    width: 300px;
+			    transform: translate(-50%,-50%);
+	    	}
+    }  
+  }
 </style>

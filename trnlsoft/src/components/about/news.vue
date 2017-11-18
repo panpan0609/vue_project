@@ -10,7 +10,7 @@
 		          		<div class="mask" v-show="it.detailShow">
 		                  <span></span>
 		                </div>          
-			        </el-col>
+			        	</el-col>
 		           	<el-col :sm="24" :md="24" :lg="24" :xl="24" class="text hidden-xs-only">
 			            <h2>{{it.title}}</h2>
 			            <p class="subtitle">{{it.subtitle}}</p>
@@ -96,7 +96,7 @@ export default {
     	]
     }
   },
-    methods:{
+	methods:{
 	    mouseenter:function(item) {
 	      item.detailShow = true;
 	    },
@@ -106,7 +106,7 @@ export default {
 	    clickCallback:function(pageNum) {
 	      console.log(pageNum);
 	    }
-    }
+	}
 }
 </script>
 
@@ -124,9 +124,9 @@ export default {
 			padding: 20px;
 			.showScale{
 				box-shadow:0px 0px 5px #ccc;
-	        	transform:scale(1.03);
-	        	transition:transform 0.5s;
-	        }
+	    	transform:scale(1.03);
+	    	transition:transform 0.5s;
+	    }
 			.item{
 				text-align: left;
 				border: 1px solid #ededed;
@@ -156,58 +156,58 @@ export default {
 					width: 100%;
 					height: 220px;
 					background-size: cover;
-				    background-repeat: no-repeat;
-				    &.bg1{
-				        .bg-image('/static/images/about/1-160F112164R55.png');
-				    }
-				    &.bg2{
-				        .bg-image('/static/images/about/1-160F51214450-L.png');
-				    }
-				    &.bg3{
-				        .bg-image('/static/images/about/1-160FZ945060-L.png');
-				    }
-				    &.bg4{
-				        .bg-image('/static/images/about/1-160G3214K50-L.png');
-				    }
-				    &.bg5{
-				        .bg-image('/static/images/about/1-160G60944560-L.png');
-				    }
-				    &.bg6{
-				        .bg-image('/static/images/about/1-16062G1231T24.jpg');
-				    }
-				    &.bg7{
-				        .bg-image('/static/images/about/1-1606301051090-L.jpg');
-				    }
-				    &.bg8{
-				        .bg-image('/static/images/about/1-1606251154290-L.png');
-				    }
-				    &.bg9{
-				        .bg-image('/static/images/about/1-160425201KH47.png');
-				    }
-				    .mask{
-				    	text-align: center;
-			            position: absolute;
-			            left: 0;
-			            right: 0;
-			            top: 0;
-			            bottom: 0;
-			            background: rgba(0,0,0,.5);
-			            transition:transform 0.5s;
-			            span{
-				            width: 100px;
-				            height: 44px;
-				            line-height: 44px;
-				            position: absolute;
-				            left: 50%;
-				            top: 50%;
-				            margin:-22px -50px;  
-				            font-weight: bold;
-				            color: #ffffff;
-				            background-position: center;
-				            background-repeat: no-repeat;
-				            .bg-image('/static/images/about/hover-link.png');
-				        }
-			        }
+				  background-repeat: no-repeat;
+			    &.bg1{
+			        .bg-image('/static/images/about/1-160F112164R55.png');
+			    }
+			    &.bg2{
+			        .bg-image('/static/images/about/1-160F51214450-L.png');
+			    }
+			    &.bg3{
+			        .bg-image('/static/images/about/1-160FZ945060-L.png');
+			    }
+			    &.bg4{
+			        .bg-image('/static/images/about/1-160G3214K50-L.png');
+			    }
+			    &.bg5{
+			        .bg-image('/static/images/about/1-160G60944560-L.png');
+			    }
+			    &.bg6{
+			        .bg-image('/static/images/about/1-16062G1231T24.jpg');
+			    }
+			    &.bg7{
+			        .bg-image('/static/images/about/1-1606301051090-L.jpg');
+			    }
+			    &.bg8{
+			        .bg-image('/static/images/about/1-1606251154290-L.png');
+			    }
+			    &.bg9{
+			        .bg-image('/static/images/about/1-160425201KH47.png');
+			    }
+			    .mask{
+			    	text-align: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0,0,0,.5);
+            transition:transform 0.5s;
+            span{
+	            width: 100px;
+	            height: 44px;
+	            line-height: 44px;
+	            position: absolute;
+	            left: 50%;
+	            top: 50%;
+	            margin:-22px -50px;  
+	            font-weight: bold;
+	            color: #ffffff;
+	            background-position: center;
+	            background-repeat: no-repeat;
+	            .bg-image('/static/images/about/hover-link.png');
+	        	}
+	        }
 				}
 			}
 		}

@@ -60,5 +60,12 @@ export default {
 
 <style lang="less" scoped>
   @import "../../../static/css/nav.less";
-  
+  @media only screen and (max-width: 767px){
+    h2.title{
+        font-size: 0.24rem;
+    }  
+    p.sub_title{
+        font-size: 0.16rem;
+    }  
+  }
 </style>

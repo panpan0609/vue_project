@@ -13,9 +13,9 @@
           <el-col :xs="2" :sm="2" :md="2" :lg="2" :xl="2" :offset="16" class="header-icon hidden-sm-and-up" @click.native="shownav = ! shownav">
           	<img src="./assets/icon.png"/>
           </el-col>
-          <transition name="bounce">
-				    <el-col :xs="24" class="toggle-nav" v-show="shownav">
-		          	<router-link  :to="item.to" class="item" v-for="(item,index) of list" :key="index" :style="{color:item_text}">
+          <transition name="slide-fade">
+				    <el-col :xs="24" class="toggle-nav hidden-sm-and-up" v-show="shownav">
+		          	<router-link  :to="item.to" class="item" v-for="(item,index) of list" :key="index">
 				        	{{item.html}}
 				      	</router-link>	
 	          </el-col>
@@ -58,11 +58,6 @@ export default {
         name: 'Connection',
         to: '/connection',
         html: '联系我们'
-      },
-      {
-        name: 'Activity',
-        to: '/activity',
-        html: '宗亲活动'
       }],
       shownav:false,
       imgWhiteshow:true,
@@ -171,7 +166,7 @@ html,body{
   }
 }
 .toggle-nav{
-	background: #ccc;
+	background: #e7e7e7;
 	width: 100%;
 	.item{
 		text-align: left;
@@ -180,6 +175,7 @@ html,body{
 		line-height: 20px;
 		font-size: 0.16rem;
     cursor: pointer;
+    color: rgb(100, 106, 117);
 	}
 }
 @media only screen and (max-width: 767px){
@@ -187,11 +183,15 @@ html,body{
 	    display: block!important;
 	}
 }
-.bounce-enter-active {
-  animation: bounce-in .5s;
+.slide-fade-enter-active {
+  transition: all .3s ease;
 }
-.bounce-leave-active {
-  animation: bounce-in .5s reverse;
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to{
+  transform: translateX(10px);
+  opacity: 0;
 }
 @keyframes bounce-in {
   0% {
