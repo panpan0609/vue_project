@@ -182,7 +182,7 @@ export default {
 			        .bg-image('/static/images/about/1-1606251154290-L.png');
 			    }
 			    &.bg9{
-			        .bg-image('/static/images/about/1-160425201KH47.png');
+			        .bg-image('/static/images/about/1-16062Z93F90-L.jpg');
 			    }
 			    .mask{
 			    	text-align: center;

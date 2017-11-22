@@ -7,7 +7,9 @@ import 'element-ui/lib/theme-chalk/index.css'
 import 'element-ui/lib/theme-chalk/display.css';
 import router from './router'
 import VuePaginate from 'vuejs-paginate'
+import animate from 'animate.css' 
 
+Vue.use(animate)
 Vue.use(ElementUI);
 Vue.use(VuePaginate);
 Vue.config.productionTip = false

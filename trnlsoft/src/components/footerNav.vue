@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
-  	<el-container class="show_outbox">
+  	<el-container class="show_outbox hidden-xs-only">
       <el-main class="show_box">
-      	<el-row class="footer hidden-xs-only">
+      	<el-row class="footer">
     	    <el-col :sm="5" :md="5" :lg="5" :xl="5">
     	    	<h2>服务项目</h2>
     		    <router-link  :to="item.to" v-for="(item,index) of list1" :key="index" tag="li" @mouseenter.native="mouseenter(item)" @mouseleave.native="mouseleave(item)">
@@ -261,23 +261,26 @@ export default {
 	.el-collapse-item__header {
     height: 48px;
     line-height: 48px;
-    color: #FFFFFF;
-    font-size: 0.16rem;
+    color: #FFFFFF!important;
+    font-size: 0.16rem!important;
     text-align: left;
     padding-left: 20px;
+    box-sizing: border-box!important;
 	}
 	.el-collapse-item__header{
-		background: #3D444F;
+		background: #3D444F!important;
 	}
 	.el-collapse-item__content {
-		background: #3D444F;
+		background: #3D444F!important;
     padding-bottom: 0;
     font-size: 0.16rem;
     color: #919399;
     padding-left: 20px;
     text-align: left;
+    box-sizing: border-box!important;
 	}
 	.el-collapse, .el-collapse-item__header, .el-collapse-item__wrap {
     border-bottom: 1px solid transparent!important;
+    overflow: hidden;
 	}
 </style>

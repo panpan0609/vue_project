@@ -1,30 +1,28 @@
 <template>
   <div id="app"> 
-  		 <el-row class="header" id="header" :style="{backgroundColor:header_bg}">
-	        <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3" :offset="2" class="header-logo">
-	         <img src="./assets/phone-logo.png" class="white_logo"  alt="" v-show="imgWhiteshow">
-	         <img src="./assets/phone-blue.png" class="blue_logo"  alt="" v-show="imgBlueshow">
-	        </el-col>
-         	<el-col  :sm="16" :md="16" :lg="16" :xl="16" :offset="1" class="header-nav hidden-xs-only">
-             <router-link  :to="item.to" class="item" v-for="(item,index) of list" :key="index" :style="{color:item_text}">
-            	{{item.html}}
-          	</router-link>	
+	 <div class="header" id="header" :style="{backgroundColor:header_bg}">
+        <el-col :xs="3" :sm="3" :md="3" :lg="3" :xl="3" :offset="2" class="header-logo">
+         <img src="./assets/phone-logo.png" class="white_logo"  alt="" v-show="imgWhiteshow">
+         <img src="./assets/phone-blue.png" class="blue_logo"  alt="" v-show="imgBlueshow">
+        </el-col>
+     	<el-col  :sm="16" :md="16" :lg="16" :xl="16" :offset="1" class="header-nav hidden-xs-only">
+         <router-link  :to="item.to" class="item" v-for="(item,index) of list" :key="index" :style="{color:item_text}">
+        	{{item.html}}
+      	</router-link>	
+      </el-col>
+      <el-col :xs="2" :sm="2" :md="2" :lg="2" :xl="2" :offset="16" class="header-icon hidden-sm-and-up" @click.native="shownav = ! shownav">
+      	<img src="./assets/icon.png"/>
+      </el-col>
+      <transition name="slide-fade">
+			    <el-col :xs="24" class="toggle-nav hidden-sm-and-up" v-show="shownav">
+	          	<router-link  :to="item.to" class="item" v-for="(item,index) of list" :key="index">
+			        	{{item.html}}
+			      	</router-link>	
           </el-col>
-          <el-col :xs="2" :sm="2" :md="2" :lg="2" :xl="2" :offset="16" class="header-icon hidden-sm-and-up" @click.native="shownav = ! shownav">
-          	<img src="./assets/icon.png"/>
-          </el-col>
-          <transition name="slide-fade">
-				    <el-col :xs="24" class="toggle-nav hidden-sm-and-up" v-show="shownav">
-		          	<router-link  :to="item.to" class="item" v-for="(item,index) of list" :key="index">
-				        	{{item.html}}
-				      	</router-link>	
-	          </el-col>
-				  </transition>
-          
-      </el-row>
-
-      <router-view/>
-    <footerNav></footerNav>
+			  </transition>
+  </div>
+  <router-view/>
+  <footerNav></footerNav>
   </div>
 </template>
 

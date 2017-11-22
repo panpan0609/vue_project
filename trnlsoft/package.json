@@ -10,6 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "element-ui": "^2.0.2",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",

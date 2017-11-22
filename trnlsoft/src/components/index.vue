@@ -8,56 +8,76 @@
         <button>了解详情</button>
       </div>
     </div>
+    
      <el-container class="show_outbox">
       <el-main class="case">
       <h2 class="case_title">有效支持客户的业务战略</h2>
       <p class="case_title">天软农联服务于互联网在多平台的解决方案</p>
       <el-row class="show_case">
-        <el-col :xs="24" :sm="4" :md="4" :lg="4" :xl="4"  v-for="(it,index) in lis" :key="index" class="item">
-          <el-col :xs="8" :sm="24" :md="24" :lg="24" :xl="24">
-            <img :src="it.src" alt="">
-          </el-col>
-           <el-col :xs="16" :sm="24" :md="24" :lg="24" :xl="24">
-            <h2>{{it.title}}</h2>
-            <p>{{it.subtitle}}</p>
-          </el-col>
+      	<transition-group enter-active-class="fadeInUp" leave-active-class="fadeOutDown">
+        <el-col :xs="24" :sm="4" :md="4" :lg="4" :xl="4"  v-for="(it,index) in lis" :key="index" class="item animated" v-show="show">       	
+	          <el-col :xs="8" :sm="24" :md="24" :lg="24" :xl="24">
+	            <img :src="it.src" alt="">
+	          </el-col>
+	           <el-col :xs="16" :sm="24" :md="24" :lg="24" :xl="24">
+	            <h2>{{it.title}}</h2>
+	            <p>{{it.subtitle}}</p>
+	          </el-col>
         </el-col>
+        </transition-group>
+      </el-row>
+      
+      <el-row class="show_type">
+      	<transition enter-active-class="fadeInLeft" leave-active-class="fadeOutLeft">
+	        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_item animated" v-show="show">
+	            <h2>行业领先的技术水平</h2>
+	            <p>我们的成员来自顶尖互联网公司和一流大学，有丰富的产品开发经验。基于合作双赢模式，为您打造优质产品。</p>
+	        </el-col>
+       </transition>
+       <transition enter-active-class="fadeInRight" leave-active-class="fadeOutRight">
+	        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img animated" v-show="show">
+	            <img src="/static/images/chengyuan-01.png" alt="">
+	        </el-col>
+        </transition>
       </el-row>
       <el-row class="show_type">
-        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_item">
-            <h2>行业领先的技术水平</h2>
-            <p>我们的成员来自顶尖互联网公司和一流大学，有丰富的产品开发经验。基于合作双赢模式，为您打造优质产品。</p>
-        </el-col>
-        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img">
-            <img src="/static/images/chengyuan-01.png" alt="">
-        </el-col>
+      	<transition enter-active-class="fadeInLeft" leave-active-class="fadeOutLeft">
+	        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img animated" v-show="show">
+	            <img src="/static/images/liucheng-01.png" alt="">
+	        </el-col>
+        </transition>
+        <transition enter-active-class="fadeInRight" leave-active-class="fadeOutRight">
+	        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_item animated" v-show="show">
+	            <h2>专业流程化制作产品</h2>
+	            <p>从用户需求调研到产品架构、研发、测试一系列专业、细致、严谨的内部研发流程，确保按时交付让用户满意的产品</p>
+	        </el-col>
+        </transition>
       </el-row>
       <el-row class="show_type">
-        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img">
-            <img src="/static/images/liucheng-01.png" alt="">
-        </el-col>
-        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_item">
-            <h2>专业流程化制作产品</h2>
-            <p>从用户需求调研到产品架构、研发、测试一系列专业、细致、严谨的内部研发流程，确保按时交付让用户满意的产品</p>
-        </el-col>
+      	<transition enter-active-class="fadeInLeft" leave-active-class="fadeOutLeft">
+	        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_item animated" v-show="show">
+	            <h2>UI、UX设计</h2>
+	            <p>从研究中发现体验价值，并将其转化为符合使用场景和用户真正需求的交互模型。为品牌与用户之间提供最有效的沟通方式及具有创新性和直觉性的信息组织方式。</p>
+	        </el-col>
+        </transition>
+        <transition enter-active-class="fadeInRight" leave-active-class="fadeOutRight">
+	        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img animated" v-show="show">
+	            <img src="/static/images/unknow-1-01.png" alt="">
+	        </el-col>
+        </transition>
       </el-row>
       <el-row class="show_type">
-        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_item">
-            <h2>UI、UX设计</h2>
-            <p>从研究中发现体验价值，并将其转化为符合使用场景和用户真正需求的交互模型。为品牌与用户之间提供最有效的沟通方式及具有创新性和直觉性的信息组织方式。</p>
-        </el-col>
-        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img">
-            <img src="/static/images/unknow-1-01.png" alt="">
-        </el-col>
-      </el-row>
-      <el-row class="show_type">
-        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img">
-            <img src="/static/images/unknow-2-01.png" alt="">
-        </el-col>
-        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_item">
-            <h2>为客户带来真实有效的收益</h2>
-            <p>紧紧围绕产品做可落地的商业创新，并根据市场目标做切实可行的产品方案。TRNL关注用户体验做可运转的高质量产品。</p>
-        </el-col>
+      	<transition enter-active-class="fadeInLeft" leave-active-class="fadeOutLeft">
+	        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_img animated" v-show="show">
+	            <img src="/static/images/unknow-2-01.png" alt="">
+	        </el-col>
+        </transition>
+        <transition enter-active-class="fadeInRight" leave-active-class="fadeOutRight">
+	        <el-col :xs="24" :sm="12" :md="12" :lg="12" :xl="12" class="show_item animated" v-show="show">
+	            <h2>为客户带来真实有效的收益</h2>
+	            <p>紧紧围绕产品做可落地的商业创新，并根据市场目标做切实可行的产品方案。TRNL关注用户体验做可运转的高质量产品。</p>
+	        </el-col>
+        </transition>
       </el-row>
       </el-main>
     </el-container>
@@ -136,21 +156,32 @@ export default {
         title:'软件定制',
         subtitle:'根据企业个性化定制软件，让软件适应企业发展'
       }],
-      
+      show:false
     }
   },
   mounted:function(){
     particlesJS.load('particles','../../static/particles.json');
-			this.handleFun();
-      window.addEventListener("resize",this.handleFun);
+		this.handleFun();
+		this.handleScroll();
+	  window.addEventListener("resize",this.handleFun);
+	  window.addEventListener("scroll",this.handleScroll);
+      
   },
   methods:{
 	  handleFun(){
 	    let orderHeight = document.body.clientHeight,
             orderWidth = document.body.clientWidth;
-        document.getElementById("particles").style.height=orderHeight+ 5 +'px'; 
-        document.getElementById("particles").style.width=orderWidth+ 5 +'px';   
+        document.getElementById("particles").style.height=orderHeight+'px'; 
+        document.getElementById("particles").style.width=orderWidth+'px';   
 	  },
+	  handleScroll(){
+      let t = document.documentElement.scrollTop || document.body.scrollTop;
+			if(t>355){
+				this.show = true;
+			}else{
+				this.show = false;
+			}
+    },
     mouseenter:function(item) {
       item.detailShow = true;
     },
@@ -159,7 +190,8 @@ export default {
     }
 	},
 	beforeDestroy(){
-	  window.removeEventListener("resize",this.handleFun)
+	  window.removeEventListener("resize",this.handleFun);
+	  window.removeEventListener("scroll",this.handleScroll);
 	}
   
 }
@@ -359,4 +391,19 @@ export default {
         }
       }
     }
+  .slide-fade{
+	  position: absolute;left:0;right: 0;
+	}
+	.slide-fade-enter-active {
+	  transition: all 1.2s ease;
+	}
+	.slide-fade-leave-active {
+	
+	  transition: all .1s cubic-bezier(2.0, 0.5, 0.8, 1.0);
+	}
+	.slide-fade-enter, .slide-fade-leave-to{
+	  left:0;right: 0;
+	  transform: translateX(50px);
+	  opacity: 0;
+	}
 </style>
