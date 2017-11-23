@@ -94,6 +94,7 @@ export default {
 		    }
 		    .mask{
 		    	text-align: center;
+		    	cursor: pointer;
 			    position: absolute;
 			    left: 0;
 			    right: 0;

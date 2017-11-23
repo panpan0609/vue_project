@@ -187,6 +187,7 @@ export default {
 			    .mask{
 			    	text-align: center;
             position: absolute;
+            cursor: pointer;
             left: 0;
             right: 0;
             top: 0;
@@ -212,36 +213,5 @@ export default {
 			}
 		}
 	}
-}
-.paginate-list{
-  width: 159px;
-  margin: 0 auto;
-  text-align: left;
-  li{
-    display: block;
-    &:before{
-       content: 'o ';
-       font-weight: bold;
-       color: slategray;
-    } 
-   }
-}
-.paginate-links.items{
-  user-select: none;
-  a{
-  	cursor: pointer;
-  }
-  li.active a{
-  	 font-weight: bold;
-  }
-  li.next:before{
-  	content: ' | ';
-    margin-right: 13px;
-    color: #ddd;
-  }
-  li.disabled a{
-  	color: #ccc;
-    cursor: no-drop;
-  }
 }
 </style>
