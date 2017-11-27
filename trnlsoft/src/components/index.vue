@@ -13,9 +13,8 @@
       <el-main class="case">
       <h2 class="case_title">有效支持客户的业务战略</h2>
       <p class="case_title">天软农联服务于互联网在多平台的解决方案</p>
-      <el-row class="show_case">
-      	<transition-group enter-active-class="fadeInUp" leave-active-class="fadeOutDown">
-        <el-col :xs="24" :sm="4" :md="4" :lg="4" :xl="4"  v-for="(it,index) in lis" :key="index" class="item animated" v-show="show">       	
+      <el-row class="show_case show_type animated">
+        <el-col :xs="24" :sm="4" :md="4" :lg="4" :xl="4"  v-for="(it,index) in lis" :key="index" class="item">       	
 	          <el-col :xs="8" :sm="24" :md="24" :lg="24" :xl="24">
 	            <img :src="it.src" alt="">
 	          </el-col>
@@ -24,7 +23,6 @@
 	            <p>{{it.subtitle}}</p>
 	          </el-col>
         </el-col>
-        </transition-group>
       </el-row>
       
       <el-row class="show_type animated">
@@ -162,11 +160,11 @@ export default {
       let show_types = document.getElementsByClassName('show_type');
       for (let i=0,j=false;i<show_types.length;i++) {
         if(t+document.body.clientHeight>show_types[i].offsetTop+show_types[i].clientHeight/2){
-          show_types[i].classList.add('fadeInRight');
-          show_types[i].classList.remove('fadeOutRight');
+          show_types[i].classList.add('fadeInUp');
+          show_types[i].classList.remove('fadeOutDown');
         }else if (t<show_types[i].offsetTop+show_types[i].clientHeight/2){
-          show_types[i].classList.add('fadeOutRight');
-          show_types[i].classList.remove('fadeInRight');
+          show_types[i].classList.add('fadeOutDown');
+          show_types[i].classList.remove('fadeInUp');
         }
       }
     },
