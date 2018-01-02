@@ -149,7 +149,7 @@ html,body{
     align-items: center;
     line-height: 70px;
     .item{
-      padding: 0 0.1rem;
+      padding: 0 0.15rem;
       font-size: 0.16rem;
       cursor: pointer;
     }

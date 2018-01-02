@@ -137,9 +137,21 @@ export default {
         src:'/static/images/ruanjian-01.png',
         title:'软件定制',
         subtitle:'根据企业个性化定制软件，让软件适应企业发展'
-      }]
+      }],
+//    msg:''
     }
   },
+//created:function(){
+//		window.axios.get(window.HOST+'/home/index/index')
+//			.then(response=>{
+//			 console.log(response);
+//			 this.msg=response.data.msg;
+//			})
+//			.catch(error=>{
+//			  console.log(error);
+//			  alert('网络错误，不能访问');
+//			})
+//	},
   mounted:function(){
     particlesJS.load('particles','../../static/particles.json');
 		this.handleFun();

@@ -77,6 +77,11 @@ export default new Router({
       path: '/activity',
       name: 'Activity',
       component: Activity
+    },
+    {
+    	path:'*',
+    	name: 'Index',
+      component: Index
     }
   ]
 })
